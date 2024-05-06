@@ -2,10 +2,10 @@ import requests
 import time
 import os
 
-# თქვენი ძირითადი აპლიკაციის URL
+
 MAIN_APP_URL = os.environ.get('MAIN_APP_URL', 'https://genhub-kskx.onrender.com/')
 
-# Keep-Alive სერვისის პერიოდულობა წუთებში
+
 INTERVAL_MINUTES = 15
 
 def keep_alive():
@@ -17,7 +17,7 @@ def keep_alive():
         except requests.exceptions.RequestException as e:
             print(f'Error sending Keep-Alive request: {e}')
 
-        time.sleep(INTERVAL_MINUTES * 60)  # დაცადება შემდეგი მოთხოვნის გასაგზავნად
+        time.sleep(INTERVAL_MINUTES * 60) 
 
 if __name__ == '__main__':
     keep_alive()
